@@ -120,7 +120,7 @@ if generate_advice:
     st.session_state.advice_generated = True
 
     with st.spinner("Generating advice for you..."):
-        sleep_time = random.uniform(2, 4)  # Generate random sleep time between 2 to 4 seconds
+        sleep_time = random.uniform(3, 6)  # Generate random sleep time between 2 to 4 seconds
         time.sleep(sleep_time)  # Simulate loading for 2 seconds
 
     # Display advice
