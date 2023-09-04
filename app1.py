@@ -182,7 +182,7 @@ if st.session_state.advice_generated:
 
         #{st.session_state.advice_counter}
 
-        st.write(f"Advice generated: 197 times")
+        st.write(f"Advice generated: 217 times")
 
 
 # Footer
