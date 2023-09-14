@@ -120,7 +120,7 @@ if generate_advice:
     st.session_state.advice_generated = True
 
     with st.spinner("Generating advice for you..."):
-        sleep_time = random.uniform(3, 6)  # Generate random sleep time between 2 to 4 seconds
+        sleep_time = random.uniform(4, 8)  # Generate random sleep time between 2 to 4 seconds
         time.sleep(sleep_time)  # Simulate loading for 2 seconds
 
     # Display advice
@@ -174,7 +174,7 @@ if st.session_state.advice_generated:
             st.session_state.first_load = False
         else:
             # Display 3 to 4 advice points
-            for advice in all_advice[:4]:
+            for advice in all_advice[:5]:
                 st.write("- " + advice)
 
         
@@ -182,7 +182,7 @@ if st.session_state.advice_generated:
 
         #{st.session_state.advice_counter}
 
-        st.write(f"FinSafe used: 350 times")
+        st.write(f"FinSafe used: 351 times")
 
 
 # Footer
