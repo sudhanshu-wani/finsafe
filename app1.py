@@ -180,9 +180,7 @@ if st.session_state.advice_generated:
         
         
 
-        #{st.session_state.advice_counter}
-
-        st.write(f"FinSafe used: 1462 times")
+        
 
 
 # Footer
