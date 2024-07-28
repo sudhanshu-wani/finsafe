@@ -1,12 +1,8 @@
 import random
 import time
-import logging
 import google.generativeai as genai
 import os
 from dotenv import load_dotenv
-
-# Configure logging
-logging.basicConfig(level=logging.INFO)
 
 # Load environment variables
 load_dotenv()
@@ -26,6 +22,9 @@ def get_gemini_advice(prompt):
 
 # Streamlit app
 import streamlit as st
+import streamlit_analytics
+
+streamlit_analytics.start_tracking()
 
 st.set_page_config(page_title="FinSafe - Your Personal Financial Advisor", page_icon="💰")
 
@@ -78,3 +77,5 @@ if generate_advice:
 st.markdown("---")
 st.write("© 2024 FinSafe. All rights reserved.")
 st.write("Disclaimer: The financial advice provided here is for educational purposes only and should not be considered as personalized financial advice. It is recommended to consult with a qualified financial advisor before making any investment decisions")
+
+streamlit_analytics.stop_tracking()
