@@ -58,7 +58,7 @@ if generate_advice:
         time.sleep(sleep_time)  # Simulate loading
 
     # Generate advice using Gemini
-    prompt = f"You are a kind and expert financial advisor. Provide financial advice for someone who is {age} years old, has a monthly income of ${income}, and has ${debt} in debt."
+    prompt = f"You are a kind and expert financial advisor. Provide financial advice for someone who is ${age} years old, has a monthly income of ${income}, and has ${debt} in debt. DO NOT ask for further input from the user."
     gemini_advice = get_gemini_advice(prompt)
 
     # Display advice
