@@ -46,14 +46,14 @@ if "advice_generated" not in st.session_state:
 if "first_load" not in st.session_state:
     st.session_state.first_load = True
 
-generate_advice = st.button("Generate Advice")
+generate_advice = st.button("Generate Advice (We don't save your data)")
 # Display financial advice
 if generate_advice:
     st.session_state.advice_counter += 1  # Increment the advice counter
     st.session_state.advice_generated = True
 
     with st.spinner("Generating advice for you..."):
-        sleep_time = random.uniform(4, 8)  # Generate random sleep time between 4 to 8 seconds
+        sleep_time = random.uniform(4, 9)  # Generate random sleep time between 4 to 8 seconds
         time.sleep(sleep_time)  # Simulate loading
 
     # Generate advice using Gemini
@@ -75,7 +75,7 @@ if generate_advice:
 
 # Footer
 st.markdown("---")
-st.write("© 2024 FinSafe. All rights reserved.")
+st.write("© 2025 FinSafe. All rights reserved.")
 st.write("Disclaimer: The financial advice generator is to be used for educational purposes only and should not be considered as professional financial advice. It is recommended to consult with a qualified financial advisor before making any financial decisions")
 
 streamlit_analytics.stop_tracking()
